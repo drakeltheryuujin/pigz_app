@@ -11,11 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160910195731) do
+ActiveRecord::Schema.define(version: 20160910205120) do
 
   create_table "cops", force: :cascade do |t|
-    t.float "latitude",  null: false
-    t.float "longitude", null: false
+    t.float   "latitude",     null: false
+    t.float   "longitude",    null: false
+    t.integer "racism_index"
+    t.string  "gender"
+    t.string  "skin_color"
+    t.string  "body_type"
   end
 
 end
