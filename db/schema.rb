@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20160910205120) do
     t.float   "latitude",     null: false
     t.float   "longitude",    null: false
     t.integer "racism_index"
-    t.string  "gender"
+    ,.string  "gender"
     t.string  "skin_color"
     t.string  "body_type"
   end
