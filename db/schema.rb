@@ -13,11 +13,14 @@
 
 ActiveRecord::Schema.define(version: 20160910205120) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "cops", force: :cascade do |t|
     t.float   "latitude",     null: false
     t.float   "longitude",    null: false
     t.integer "racism_index"
-    ,.string  "gender"
+    t.string  "gender"
     t.string  "skin_color"
     t.string  "body_type"
   end
