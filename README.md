@@ -1,2 +1,2 @@
-# pigz_app
+# Pigz
 Demo for Comedy Hack Day 11
