@@ -5,13 +5,9 @@ class Cop < ActiveRecord::Base
 
   after_create :push_notification
 
-  private
-
-  def push_notification
-    #find your gps location (lat/long)
-    #if the newly added cop is within .5 mile radius, alert user
-    #send out notification message
-
-  end
-
+  acts_as_mappable default_units: :kms,
+                   default_formula: :sphere,
+                   distance_field_name: :distance,
+                   lat_column_name: :latitude,
+                   lng_column_name: :longitude
 end
