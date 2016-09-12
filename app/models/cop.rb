@@ -3,8 +3,6 @@ class Cop < ActiveRecord::Base
   validates :longitude, presence: true
   validates :demeanor, presence: true
 
-  after_create :push_notification
-
   acts_as_mappable default_units: :kms,
                    default_formula: :sphere,
                    distance_field_name: :distance,
