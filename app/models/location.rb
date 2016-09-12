@@ -13,4 +13,14 @@ class Location
   def to_a
     [@lat, @lng]
   end
+
+  def ==(o)
+    o.class == self.class && o.state == self.state
+  end
+
+  protected
+
+  def state
+    [@lat, @lng]
+  end
 end
