@@ -2,8 +2,6 @@ module Api
   module V1
     class DirectionsController < BaseController
       def route
-        binding.pry
-
         render json: Direction.new(origin, destination).route
       end
 
